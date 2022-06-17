@@ -27,13 +27,15 @@ export const Landing = () => {
                         <Typography variant="h3" sx={{ fontFamily: "robot , sans-serif" }}>
                             News Across 
                         </Typography>
-                        <Typography>
-                            INDIA
+                        <Typography sx={{color:"orange"}} variant="h4">
+                            The World
                         </Typography>
                     </Box>
                 </Fade>
+                
 
             </Box>
+
         </Box>
     )
 }   

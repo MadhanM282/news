@@ -22,13 +22,13 @@ export const ButtonAppBar = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" >
+        <AppBar position="fixed" >
           <Toolbar sx={{display: 'flex',justifyContent: 'space-evenly'}}>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
               News
             </Typography>
 
-            <SearchAppBar />
+            {/* <SearchAppBar /> */}
             {/* <Button color="inherit">Login</Button> */}
           </Toolbar>
         </AppBar>
