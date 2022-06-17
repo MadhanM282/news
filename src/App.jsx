@@ -15,8 +15,8 @@ function App() {
     <div className="App">
       <ButtonAppBar/>
       <Landing/>
-      
-      {/* <Home/> */}
+
+      <Home/>
     </div>
   )
 }
