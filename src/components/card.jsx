@@ -2,19 +2,19 @@ import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Box } from '@mui/material';
+import { Box, Button, Typography } from "@mui/material"
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { article, clicked } from '../Redux/article/action';
 
 export const Cards = ({ data }) => {
     const [expanded, setExpanded] = React.useState(false);
     let date = data.publishedAt.split("T")
-    // if(data.urlToImage===null){
-    //     return
-    // }
+    const dispatch = useDispatch()
     return (
-        <Box sx={{ m: 1, width: "410px" }} onClick={() => window.location = `${data.url}`}>
+        <Box sx={{ m: 1, width: "410px" }}>
             <Accordion
                 expanded={expanded === 'panel1'}
                 onMouseEnter={() => setExpanded("panel1")}
@@ -24,16 +24,15 @@ export const Cards = ({ data }) => {
 
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
-
                 >
                     <Box>
 
                         <img height="200px" src={data.urlToImage} alt={data.urlToImage} />
-                        <Typography sx={{ color: 'text.secondary',textAlign:'left' }}>{data.title}</Typography>
+                        <Typography sx={{ color: 'text.secondary', textAlign: 'left' }}>{data.title}</Typography>
                     </Box>
                 </AccordionSummary>
-                <AccordionDetails sx={{textAlign: 'left'}}>
-                    <Typography variant="h6">
+                <AccordionDetails sx={{ textAlign: 'left' }}>
+                    {/* <Typography variant="h6">
                         Source:-{data.source.name}
                     </Typography>
                     <Typography variant="h6">
@@ -41,7 +40,10 @@ export const Cards = ({ data }) => {
                     </Typography>
                     <Typography>
                         {data.description}
-                    </Typography>
+                    </Typography> */}
+                    <Button onClick={() =>{
+                        dispatch(article(data))
+                        dispatch(clicked())}}>View more</Button>
                 </AccordionDetails>
             </Accordion>
 

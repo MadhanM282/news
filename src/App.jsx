@@ -16,7 +16,7 @@ function App() {
       <ButtonAppBar/>
       <Landing/>
 
-      <Home/>
+      {/* <Home/> */}
     </div>
   )
 }

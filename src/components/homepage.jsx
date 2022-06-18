@@ -33,7 +33,7 @@ export const Home = () => {
     }
 
     return (
-        <Box>
+        <Box sx={{height:"90vh",overflow:"scroll"}}>
             {/* <ButtonAppBar /> */}
             {/* <Card Ru={Ru} In={In} Us={Us} /> */}
             <Card  In={In} />
