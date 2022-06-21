@@ -41,7 +41,7 @@ export const Cards = ({ data }) => {
                     <Typography>
                         {data.description}
                     </Typography> */}
-                    <Button onClick={() =>{
+                    <Button sx={[{ bgcolor: "orange", color: "white", borderRadius: "50px", width: "100px" }, () => ({ "&:hover": { color: "#ff9900", bgcolor: "#ffffff" } })]} onClick={() =>{
                         dispatch(article(data))
                         dispatch(clicked())}}>View more</Button>
                 </AccordionDetails>

@@ -26,7 +26,7 @@ export const SingleArticle = ()=>{
             {/* <h4>Published on: {date[0]}</h4> */}
             <Button onClick={() =>{
                 window.location=`${article.url}`
-            }}>Know more</Button>
+            }} sx={[{ bgcolor: "orange", color: "white", borderRadius: "50px", width: "200px" }, () => ({ "&:hover": { color: "#ff9900", bgcolor: "#ffffff" } })]}>Know more</Button>
         </Box>
         ):""
 }
