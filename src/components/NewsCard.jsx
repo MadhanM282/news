@@ -17,22 +17,7 @@ export const Card = ({ In}) => {
                         </Fade>
                     })}
                 </Box>
-                {/* <Box sx={{width:"30%"}} className='usa'>
-                    {Us.map((e) => {
-
-                        return<Fade bottom>
-                            <Cards data={e} />
-                        </Fade>
-                    })}
-                </Box>
-                <Box sx={{width:"30%"}} className='russia'>
-                    {Ru.map((e) => {
-
-                        return<Fade bottom>
-                            <Cards data={e} />
-                        </Fade>
-                    })}
-                </Box> */}
+                
             </Box>
         </Box>
     );
