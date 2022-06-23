@@ -32,15 +32,7 @@ export const Cards = ({ data }) => {
                     </Box>
                 </AccordionSummary>
                 <AccordionDetails sx={{ textAlign: 'left' }}>
-                    {/* <Typography variant="h6">
-                        Source:-{data.source.name}
-                    </Typography>
-                    <Typography variant="h6">
-                        Published on:-{date[0]}
-                    </Typography>
-                    <Typography>
-                        {data.description}
-                    </Typography> */}
+                   
                     <Button sx={[{ bgcolor: "orange", color: "white", borderRadius: "50px", width: "100px" }, () => ({ "&:hover": { color: "#ff9900", bgcolor: "#ffffff" } })]} onClick={() =>{
                         dispatch(article(data))
                         dispatch(clicked())}}>View more</Button>
@@ -50,15 +42,3 @@ export const Cards = ({ data }) => {
         </Box>
     );
 }
-
-// author: null
-// content: "KK, who was just 54 years old, is survived by his wife and two children.\r\nMumbai: Several celebrities from the Indian music industry paid heartfelt tributes to Krishnakumar Kunnath, better known as K… [+2493 chars]"
-// description: "Several celebrities from the Indian music industry paid heartfelt tributes to Krishnakumar Kunnath, better known as KK, after the demise of the popular playback singer."
-// publishedAt: "2022-06-01T02:16:08Z"
-// source:
-    // id: null
-    // name: "NDTV News"
-    // [[Prototype]]: Object
-// title: "From Sonu Nigam To Shreya Ghoshal, Music Industry Mourns KK's Sudden Demise - NDTV"
-// url: "https://www.ndtv.com/india-news/singer-kk-dies-from-sonu-nigam-to-shreya-ghoshal-music-industry-mourns-singers-sudden-demise-3027513"
-// urlToImage: "https://c.ndtvimg.com/2022-06/br4rbbeg_singer-kk_625x300_01_June_22.jpg"
