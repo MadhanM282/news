@@ -3,7 +3,10 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { ButtonAppBar } from "./nav"
 import { Card } from "./NewsCard"
+// import env from '../../env'
 export const Home = () => {
+    // const key = REACT_APP_APIKEY
+    // console.log('key', key);
     const [Ru, SetRu] = useState([])
     const [In,SetIn] = useState([]);
     const [Us,SetUs] = useState([]);
@@ -14,10 +17,10 @@ export const Home = () => {
     //     axios.get(`https://newsapi.org/v2/top-headlines?country=nz&apiKey=`).then(({ data }) => {
     //         console.log('data', data);
     //         SetRu(data.articles)
-    //     })
+    //     })   
     // }
     const GetDataIndia = () => {
-        axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.REACT_APP_APIKEY}`).then(({ data }) => {
+        axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=7731b0203f1f47028f029aab37012d8c`).then(({ data }) => {
             console.log('data', data);
             SetIn(data.articles)
             // GetDataUSA()
